@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Toko Pigura{% endblock %}</title>
+        <link rel="icon" href="{% static 'enterprise/tokopigura.jpg' %}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+<body class="bg-green-100 text-gray-700">
+ 
+    <nav class="bg-green-500 p-4">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="{% url 'home' %}" class="text-white hover:text-green-200"><i class="fa fa-sun"></i> Home</a></li>
+            <li><a href="{% url 'catalog' %}" class="text-white hover:text-green-200"><i class="fa fa-list-alt"></i> Katalog</a></li>
+            <li><a href="{% url 'digital_product' %}" class="text-white hover:text-green-200"><i class="fa fa-digital-tachograph"></i> Lokasi Store</a></li>
+        </ul>
+    </nav>
+ 
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="bg-green-500 p-4 text-white text-center">
+        <p>Jl. Srandakan Bantul YK</p>
+        <p>Owner sosmed: 
+            <a href="https://www.instagram.com/xsan_24/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/new.guanteng" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </p>
+        <p>
+            <a href="https://wa.me/6289502019226" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                +6289502019226
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

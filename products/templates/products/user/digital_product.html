@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Digital Product - Toko Pigura{% endblock %}
+
+{% block content %}
+<div class="py-12">
+    <h2 class="text-3xl font-bold mb-6">Digital Product</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"> 
+    </div>
+</div> 
+<div class="bg-gray-100 p-4">
+    <h3 class="text-2xl font-bold mb-4">Lokasi: Xsan Pigura Mangiran</h3>
+    <div id="map" class="w-full h-96"></div>
+</div> 
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+<script>
+    function initMap() { 
+        var xsanPigura = { lat: -6.123456, lng: 106.789012 }; 
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: xsanPigura,
+            zoom: 15
+        }); 
+        var marker = new google.maps.Marker({
+            position: xsanPigura,
+            map: map,
+            title: 'Xsan Pigura'
+        });
+    }
+</script>
+{% endblock %}

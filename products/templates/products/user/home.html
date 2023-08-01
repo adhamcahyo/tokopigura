@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Toko Pigura - Home{% endblock %}
+
+{% block content %}
+
+<div class="bg-green-600 py-16 text-white text-center">
+    <h1 class="text-4xl font-bold mb-4">Selamat datang di Toko Pigura</h1>
+    <p class="text-xl">Mari temukan pigura cantik dan unik untuk mempercantik momen indah Anda!</p>
+</div>
+<div class="py-12 text-center">
+    <h2 class="text-3xl font-bold mb-6">Koleksi Kategori Pigura</h2>
+    <div class="flex justify-center space-x-8">
+        <div>
+            <img src="{% static 'dummy/category1.jpg' %}" alt="Kategori 1" class="w-32 h-32 rounded-full">
+            <p class="font-bold mt-2">Pigura Minimalis</p>
+        </div>
+        <div>
+            <img src="{% static 'dummy/category2.jpg' %}" alt="Kategori 2" class="w-32 h-32 rounded-full">
+            <p class="font-bold mt-2">Pigura Elegan</p>
+        </div>
+        <div>
+            <img src="{% static 'dummy/category3.jpg' %}" alt="Kategori 3" class="w-32 h-32 rounded-full">
+            <p class="font-bold mt-2">Pigura Lucu dan Imut</p>
+        </div>
+    </div>
+</div>
+<div class="py-12 text-center">
+    <h2 class="text-3xl font-bold mb-6">Produk Terbaru</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div>
+            <img src="{% static 'dummy/product1.jpg' %}" alt="Produk 1" class="w-full h-48 object-cover">
+            <p class="font-bold mt-2">Pigura Kayu Rustic</p>
+        </div>
+        <div>
+            <img src="{% static 'dummy/product2.jpg' %}" alt="Produk 2" class="w-full h-48 object-cover">
+            <p class="font-bold mt-2">Pigura Bingkai Emas</p>
+        </div>
+        <div>
+            <img src="{% static 'dummy/product3.jpg' %}" alt="Produk 3" class="w-full h-48 object-cover">
+            <p class="font-bold mt-2">Pigura Vintage Klasik</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
