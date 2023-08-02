@@ -65,7 +65,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tokopigura',
-        'USER': '',
+        'USER': ' ',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
