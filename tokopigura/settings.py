@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'tokopigura.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'tokopigura',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',
